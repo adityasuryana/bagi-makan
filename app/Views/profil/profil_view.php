@@ -18,7 +18,9 @@
                 
                 <div class="col">
                     <div class="card bg-gray p-3 h-100">
-                    <a class="link" href="<?= base_url('logout') ?>">Keluar</a>
+                        <a class="link" href="">Edit Profil</a>
+                        <a class="link" href="">Riwayat Donasi</a>
+                        <a class="link" href="<?= base_url('logout') ?>">Keluar</a>
                     </div>
                 </div>
             </div>

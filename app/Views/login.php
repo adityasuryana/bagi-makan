@@ -11,9 +11,9 @@ $session = session();
 <body class="bg-green">
 <div class="container">
     <div class="row">
-        <div class="col-lg-6 col-sm-12 position-absolute top-50 start-50 translate-middle">
+        <div class="col-xl-4 col-lg-6 col-md-8 col-sm-12 col-12 position-absolute top-50 start-50 translate-middle">
             <div class="card bg-white m-2 p-4">
-                <h2 class="head-title fw-s-bold mb-5 text-center">bagi makan</h2>
+                <h2 class="head-title fw-s-bold mb-4 text-center">bagi makan</h2>
                 
                     <?php
                         if ($session->getFlashdata('error')) {
@@ -28,18 +28,24 @@ $session = session();
                                 <input type="email" name="email" class="form-control" id="email" value="<?= old('email') ?>" required>
                             </div>
                             
-                            <div class="mb-4">
+                            <div class="mb-2">
                                 <label for="password" class="form-label">Password</label>
                                 <input type="password" name="password" class="form-control" id="password" required>
                             </div>
-                            <input type="submit" id="submit" class="black-button fw-s-bold w-100 mt-3" value="Login">
-                            
-                            <div class="text-center mt-3">
+
+                            <div class="d-flex float-end">
                                 <a class="link" href="">Lupa password?</a>
                             </div>
+
+                            <input type="submit" id="submit" class="black-button fw-s-bold w-100 mt-3" value="Masuk">
+                            
+                            <div class="text-center mt-3">
+                                <a class="link" href="<?php echo base_url('/'); ?>">Kembali</a>
+                            </div>
+                            
                         </form>
                 </div>
-                <a class="link m-2 mt-3" href="">Belum punya akun? Daftar</a>
+                
 
             </div>
         </div>

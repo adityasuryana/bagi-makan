@@ -96,6 +96,11 @@ a {
     font-weight: 400;
 }
 
+.top-90 {
+    top: 90%;
+
+}
+
 .carousel-inner {
     border-radius: 15px;
     max-height: 180px;
@@ -150,6 +155,18 @@ a {
     border-radius: 15px;
     border:none;
     background-color: #000 !important;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.white-button {
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 15px;
+    border:none;
+    background-color: white !important;
     padding: 10px;
     text-align: center;
     width: 100%;
