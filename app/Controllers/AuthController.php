@@ -10,6 +10,11 @@ class AuthController extends Controller
         echo view('login');
     }
 
+    public function register()
+    {
+        echo view('register');
+    }
+
     public function processLogin()
     {
         helper('url');
@@ -28,7 +33,7 @@ class AuthController extends Controller
                 $session = \Config\Services::session();
                 $session->set('user', $user);
 
-                return redirect()->to(base_url('/'));
+                return redirect()->to(base_url('home'));
             } else {
                 return redirect()->to(base_url('login'))->with('error', 'Invalid password');
             }
