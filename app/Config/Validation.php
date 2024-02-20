@@ -43,4 +43,11 @@ class Validation extends BaseConfig
     // Rules
     // --------------------------------------------------------------------
 
+    public $donasi = [
+        'alamat' =>'required',
+        'tujuan' => 'required',
+        'penerima' => 'required',
+        'nama_makanan' => 'required',
+        'jenis_makanan' => 'required',
+	];
 }

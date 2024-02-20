@@ -5,9 +5,9 @@ use CodeIgniter\Model;
 
 class donasi_model extends Model
 {
-    protected $table = 'panen';
+    protected $table = 'donasi';
 
-    public function getPanen($id = false)
+    public function getDonasi($id = false)
     {
         if ($id === false) {
             return $this->findAll();
@@ -16,19 +16,9 @@ class donasi_model extends Model
         }
     }
 
-    public function insertPanen($data)
+    public function insertDonasi($data)
     {
         return $this->db->table($this->table)->insert($data);
-    }
-
-    public function updatePanen($data, $id)
-    {
-        return $this->db->table($this->table)->update($data, ['id' => $id]);
-    }
-
-    public function deletePanen($id)
-    {
-        return $this->db->table($this->table)->delete(['id' => $id]);
     }
 
 }

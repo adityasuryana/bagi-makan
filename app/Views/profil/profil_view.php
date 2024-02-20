@@ -39,7 +39,7 @@ echo view('_partials/header'); ?>
                         
                         <a class="link fw-s-bold mb-2" href="">Edit Profil</a>
                         <a class="link fw-s-bold mb-2" href="<?php echo base_url('riwayat'); ?>">Riwayat Donasi</a>
-                        <a class="link fw-s-bold" href="<?= base_url('logout') ?>">Keluar</a>
+                        <a class="link fw-s-bold" href="<?= base_url('/logout') ?>">Keluar</a>
                     </div>
                 </div>
             </div>

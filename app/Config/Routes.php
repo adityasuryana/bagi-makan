@@ -14,6 +14,7 @@ $routes->get('/', 'Home::index', ['filter' => 'login']);
 
 //Routing Donasi
 $routes->get('/donasi', 'Donasi::index', ['filter' => 'login']);
+$routes->post('/donasi/simpan', 'Donasi::simpan', ['filter' => 'login']);
 
 //Routing profil
 $routes->get('/profil', 'Profil::index',['filter' => 'login']);
