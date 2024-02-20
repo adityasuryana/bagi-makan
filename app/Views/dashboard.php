@@ -1,8 +1,3 @@
-<!-- 
-    Aditya Suryana
-    IF8 - 10121297
-    2024
- -->
 <?php 
 $session = \Config\Services::session();
 
@@ -24,7 +19,7 @@ echo view('_partials/header'); ?>
 
         <div class="container">
             <div class="row mb-3 mt-3">
-                <h3 class="fw-medium fs-25 mb-3">Home</h3>
+                <h3 class="fw-s-bold fs-25 mb-3">Home</h3>
                 <div id="" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner object-fit-cover ">
                         <div class="carousel-item active">

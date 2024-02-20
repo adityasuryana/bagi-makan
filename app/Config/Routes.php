@@ -21,3 +21,6 @@ $routes->get('donasi', 'donasi::index');
 
 //Routing profil
 $routes->get('profil', 'profil::index');
+
+//Routing Donasi
+$routes->get('riwayat', 'riwayat::index');

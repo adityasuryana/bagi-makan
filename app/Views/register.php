@@ -1,8 +1,3 @@
-<!-- 
-    Aditya Suryana
-    IF8 - 10121297
-    2024
- -->
 <?php 
 helper('url');
 echo view('_partials/header');

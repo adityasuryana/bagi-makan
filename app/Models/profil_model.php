@@ -5,9 +5,10 @@ use CodeIgniter\Model;
 
 class profil_model extends Model
 {
-    protected $table = 'kategori';
+    protected $table = 'users';
+    protected $primaryKey = 'id';
 
-    public function getKategori($id = false)
+    public function getUser($id = false)
     {
         if ($id === false) {
             return $this->findAll();
@@ -16,25 +17,6 @@ class profil_model extends Model
         }
     }
 
-    public function insertKategori($data)
-    {
-        return $this->db->table($this->table)->insert($data);
-    }
-
-    public function updateKategori($data, $id)
-    {
-        return $this->db->table($this->table)->update($data, ['id' => $id]);
-    }
-
-    public function deleteKategori($id)
-    {
-        return $this->db->table($this->table)->delete(['id' => $id]);
-    }
-
-    public function getTotalKategori() {
-        $query = $this->db->query("SELECT count(*) as total FROM kategori");
-        return $query->getRow()->total;
-    }
 
 }
 ?>

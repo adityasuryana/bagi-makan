@@ -1,4 +1,10 @@
-<?php echo view('_partials/header'); ?>
+<?php 
+$session = \Config\Services::session();
+
+if (!$session->has('user')) {
+    return redirect()->to(base_url('login'));
+}
+echo view('_partials/header'); ?>
         
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -18,9 +24,14 @@
                 
                 <div class="col">
                     <div class="card bg-gray p-3 h-100">
-                        <a class="link" href="">Edit Profil</a>
-                        <a class="link" href="">Riwayat Donasi</a>
-                        <a class="link" href="<?= base_url('logout') ?>">Keluar</a>
+                        <div class="d-flex w-100 text-center">
+                            <img src="" alt="">
+                            <p class="sub-title fw-s-bold"><? echo 'nama'; ?></p>
+                        </div>
+                        
+                        <a class="link fw-s-bold mb-2" href="">Edit Profil</a>
+                        <a class="link fw-s-bold mb-2" href="<?php echo base_url('riwayat'); ?>">Riwayat Donasi</a>
+                        <a class="link fw-s-bold" href="<?= base_url('logout') ?>">Keluar</a>
                     </div>
                 </div>
             </div>
