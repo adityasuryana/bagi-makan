@@ -25,6 +25,7 @@ class Validation extends BaseConfig
         FormatRules::class,
         FileRules::class,
         CreditCardRules::class,
+        \Myth\Auth\Authentication\Passwords\ValidationRules::class,
     ];
 
     /**
@@ -41,21 +42,5 @@ class Validation extends BaseConfig
     // --------------------------------------------------------------------
     // Rules
     // --------------------------------------------------------------------
-    public $panen = [
-		'nama' => 'required',
-		'kategori' => 'required',
-        'jumlah' => 'required',
-        'deskripsi' => 'required'
-	];
 
-    public $kategori = [
-		'nama' => 'required',
-        'deskripsi' => 'required'
-	];
-
-    public $penjualan = [
-		'nama' => 'required',
-        'jumlah' => 'required',
-        'harga' => 'required'
-	];
 }

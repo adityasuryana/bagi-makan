@@ -1,9 +1,17 @@
 <?php 
-$session = \Config\Services::session();
+use Myth\Auth\Authentication\Authentication;
+use Config\Services;
 
-if (!$session->has('user')) {
-    return redirect()->to(base_url('login'));
+$authentication = Services::authentication();
+
+$username = '';
+
+if ($authentication->check()) {
+    $user = $authentication->user();
+
+    $username = $user->username;
 }
+
 
 echo view('_partials/header'); ?>
 
@@ -67,7 +75,7 @@ echo view('_partials/header'); ?>
             <div class="container justify-content-center">
                 <ul class="navbar-nav navbar-bottom d-contents">
                     <li class="nav-item text-center mx-4">
-                        <a class="nav-link d-grid py-0 active" href="<?php echo base_url('/'); ?>"><i class="fa-solid fa-house mb-2"></i>Home</a>
+                        <a class="nav-link d-grid py-0 active" href="<?= url_to('/') ?>"><i class="fa-solid fa-house mb-2"></i>Home</a>
                     </li>
                     <li class="nav-item text-center mx-4">
                         <a class="nav-link d-grid py-0" href="<?php echo base_url('donasi'); ?>"><i class="fa-solid fa-hand-holding-heart mb-2"></i>Donasi</a>

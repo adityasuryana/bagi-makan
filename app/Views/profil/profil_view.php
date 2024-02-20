@@ -1,9 +1,17 @@
 <?php 
-$session = \Config\Services::session();
+use Myth\Auth\Authentication\Authentication;
+use Config\Services;
 
-if (!$session->has('user')) {
-    return redirect()->to(base_url('login'));
+$authentication = Services::authentication();
+
+$username = '';
+
+if ($authentication->check()) {
+    $user = $authentication->user();
+
+    $username = $user->username;
 }
+
 echo view('_partials/header'); ?>
         
         <nav class="navbar navbar-expand-lg">
@@ -24,9 +32,9 @@ echo view('_partials/header'); ?>
                 
                 <div class="col">
                     <div class="card bg-gray p-3 h-100">
-                        <div class="d-flex w-100 text-center">
+                        <div class="w-100 text-center">
                             <img src="" alt="">
-                            <p class="sub-title fw-s-bold"><? echo 'nama'; ?></p>
+                            <p class="sub-title fw-s-bold"><?php echo $username; ?></p>
                         </div>
                         
                         <a class="link fw-s-bold mb-2" href="">Edit Profil</a>

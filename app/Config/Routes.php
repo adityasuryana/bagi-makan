@@ -7,20 +7,16 @@ use CodeIgniter\Router\RouteCollection;
  */
 
 //Routing Welcome
-$routes->get('/', 'Welcome::index');
+$routes->get('/welcome', 'Welcome::index');
 
 //Routing Dashboard
-$routes->get('/home', 'Home::index');
-$routes->get('/login', 'AuthController::login');
-$routes->get('/register', 'AuthController::register');
-$routes->post('/processLogin', 'AuthController::processLogin');
-$routes->get('/logout', 'AuthController::logout');
+$routes->get('/', 'Home::index', ['filter' => 'login']);
 
 //Routing Donasi
-$routes->get('donasi', 'donasi::index');
+$routes->get('/donasi', 'Donasi::index', ['filter' => 'login']);
 
 //Routing profil
-$routes->get('profil', 'profil::index');
+$routes->get('/profil', 'Profil::index',['filter' => 'login']);
 
 //Routing Donasi
-$routes->get('riwayat', 'riwayat::index');
+$routes->get('/riwayat', 'Riwayat::index', ['filter' => 'login']);

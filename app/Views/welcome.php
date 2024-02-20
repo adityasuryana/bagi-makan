@@ -6,7 +6,6 @@
 <?php 
     helper('url');
     echo view('_partials/header');
-    $session = session();
 ?>
 <body class="bg-green">
 <div class="container">
@@ -17,8 +16,8 @@
         </div>
         <div class="col-lg-6 col-md-4 col-sm-12">
             <div class="d-grid w-100 position-absolute top-90 start-50 translate-middle p-3">
-                <a class="black-button fw-s-bold mb-2" href="<?php echo base_url('/login'); ?>">Masuk</a>
-                <a class="white-button fw-s-bold" href="<?php echo base_url('/register'); ?>">Daftar</a>
+                <a class="black-button fw-s-bold mb-2" href="<?= url_to('login') ?>">Masuk</a>
+                <a class="white-button fw-s-bold" href="<?= url_to('register') ?>">Daftar</a>
             </div>
         </div>
     </div>

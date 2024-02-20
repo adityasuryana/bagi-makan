@@ -1,9 +1,17 @@
 <?php 
-$session = \Config\Services::session();
+use Myth\Auth\Authentication\Authentication;
+use Config\Services;
 
-if (!$session->has('user')) {
-    return redirect()->to(base_url('login'));
+$authentication = Services::authentication();
+
+$username = '';
+
+if ($authentication->check()) {
+    $user = $authentication->user();
+
+    $username = $user->username;
 }
+
 
 echo view('_partials/header'); ?>
         

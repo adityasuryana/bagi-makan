@@ -22,10 +22,11 @@ $session = session();
                                     </div>";
                         }
                     ?>
-                        <form method="POST" action="<?= base_url('/processLogin') ?>">
+                        <form method="POST" class="user" action="<?= url_to('login') ?>">
+                        <?= csrf_field() ?>
                             <div class="mb-3">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="email" name="email" class="form-control" id="email" value="<?= old('email') ?>" required>
+                                <input type="email" name="login" class="form-control" id="email" value="" required>
                             </div>
                             
                             <div class="mb-2">
@@ -37,10 +38,10 @@ $session = session();
                                 <a class="link" href="">Lupa password?</a>
                             </div>
 
-                            <input type="submit" id="submit" class="black-button fw-s-bold w-100 mt-3" value="Masuk">
+                            <button type="submit" id="submit" class="black-button fw-s-bold w-100 mt-3">Masuk</button>
                             
                             <div class="text-center mt-3">
-                                <a class="link" href="<?php echo base_url('/'); ?>">Kembali</a>
+                                <a class="link" href="<?= base_url('/welcome') ?>">Kembali</a>
                             </div>
                             
                         </form>
