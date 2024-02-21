@@ -2,12 +2,17 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
-
+use App\Models\donasi_model;
 class Riwayat extends Controller
 {
     public function index()
     {
-        return view('donasi/riwayat_view');
+        $model = new donasi_model();
+        $donasi = $model->getDonasi();
+        $data = [
+            'donasi' => $donasi,
+        ];
+        return view('donasi/riwayat_view', $data);
     }
 
 }

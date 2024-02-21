@@ -20,6 +20,7 @@ class donasi_model extends Model
     {
         return $this->db->table($this->table)->insert($data);
     }
+    
 
 }
 ?>
