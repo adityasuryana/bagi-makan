@@ -44,7 +44,7 @@ echo view('_partials/header'); ?>
             </div>
 
             <div class="row g-2">
-                <h3 class="fw-medium fs-25 mb-3">Informasi</h3>
+                <h3 class="fw-s-bold fs-25 mb-3">Information</h3>
                 <div class="col-6 col-sm-6">
                     <div class="card p-3 h-100">
                         <h4 class="sub-title mb-3">info 1</h4>

@@ -27,7 +27,7 @@ echo view('_partials/header'); ?>
         <div class="container">
             <div class="row mb-3 mt-3">
                 <div class="mb-3">
-                    <h3 class="fw-medium fs-25 mb-3">Profil</h3>
+                    <h3 class="fw-s-bold fs-25 mb-3">Profil</h3>
                 </div>
                 
                 <div class="col">
@@ -37,9 +37,9 @@ echo view('_partials/header'); ?>
                             <p class="sub-title fw-s-bold"><?php echo $username; ?></p>
                         </div>
                         
-                        <a class="link fw-s-bold mb-2" href="">Edit Profil</a>
-                        <a class="link fw-s-bold mb-2" href="<?php echo base_url('riwayat'); ?>">Riwayat Donasi</a>
-                        <a class="link fw-s-bold" href="<?= base_url('/logout') ?>">Keluar</a>
+                        <a class="link fw-s-bold mb-2" href=""><i class="fa-solid fa-edit me-2"></i>Edit Profil</a>
+                        <a class="link fw-s-bold mb-2" href="<?php echo base_url('riwayat'); ?>"><i class="fa-solid fa-history me-2"></i>Riwayat Donasi</a>
+                        <a class="link fw-s-bold" href="<?= base_url('/logout') ?>"><i class="fa-solid fa-sign-out-alt me-2"></i>Keluar</a>
                     </div>
                 </div>
             </div>
