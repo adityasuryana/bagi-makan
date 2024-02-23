@@ -79,7 +79,7 @@ echo view('_partials/header'); ?>
             </div>
         </div>
 
-        <nav class="navbar sticky-bottom bg-white p-3">
+        <nav class="navbar fixed-bottom bg-white p-3">
             <div class="container justify-content-center">
                 <ul class="navbar-nav navbar-bottom d-contents">
                     <li class="nav-item text-center mx-4">
